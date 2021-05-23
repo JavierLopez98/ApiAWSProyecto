@@ -15,7 +15,7 @@ namespace ApiProyecto.Data
         }
         public DbSet<Equipo> Equipos { get; set; }
         public DbSet<Jugador> Jugadores { get; set;}
-        public DbSet<Posts> Posts { get; set;}
+        
         public DbSet<Liga> Ligas { get; set; }
         public DbSet<Partidos> Partidos { get; set; }
     }
