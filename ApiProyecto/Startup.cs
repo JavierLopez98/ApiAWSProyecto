@@ -41,6 +41,7 @@ namespace ApiProyecto
                     Description = "Api Crud Proyecto Javier Lopez"
                 });
             });
+            services.AddCors(options => options.AddPolicy("AllowOrigin", c => c.AllowAnyOrigin()));
             services.AddControllers();
         }
 
@@ -51,7 +52,7 @@ namespace ApiProyecto
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            app.UseCors(options => options.AllowAnyOrigin());
             app.UseSwagger();
             app.UseSwaggerUI(options =>
             {
